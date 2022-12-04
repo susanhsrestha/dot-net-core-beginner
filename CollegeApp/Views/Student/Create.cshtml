@@ -1,0 +1,13 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Create new Student</h1>
+
+<form asp-controller="Student" asp-action="Create" method="post">
+    <input type="text" name="FirstName" placeholder="Add First Name" />
+    <input type="text" name="LastName" placeholder="Add Last Name" />
+    <input type="text" name="Mobile" placeholder="Add Phone" />
+    <button type="submit" value="Create" class="btn btn-primary">Create</button>
+</form>

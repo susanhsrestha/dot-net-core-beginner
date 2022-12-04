@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MvcMovie.Models;
+using CollegeApp.Models;
 
 namespace CollegeApp.Data
 {
@@ -11,5 +12,6 @@ namespace CollegeApp.Data
         {
         }
         public DbSet<MvcMovie.Models.Movie> Movie { get; set; }
+        public DbSet<CollegeApp.Models.Product> Product { get; set; }
     }
 }
