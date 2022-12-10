@@ -6,6 +6,7 @@ namespace CollegeApp.Controllers
 {
     public class StudentController : Controller
     {
+        
         public IActionResult Index()
         {
             return View();
@@ -44,6 +45,7 @@ namespace CollegeApp.Controllers
 
             conn.Open();
             SQLCmd.ExecuteNonQuery();
+            conn.Close();
 
             return View();
         }

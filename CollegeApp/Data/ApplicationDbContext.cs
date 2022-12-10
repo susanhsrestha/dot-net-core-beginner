@@ -13,5 +13,6 @@ namespace CollegeApp.Data
         }
         public DbSet<MvcMovie.Models.Movie> Movie { get; set; }
         public DbSet<CollegeApp.Models.Product> Product { get; set; }
+        public DbSet<CollegeApp.Models.Mobile> Mobile { get; set; }
     }
 }
