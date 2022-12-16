@@ -22,12 +22,19 @@ namespace CollegeApp.Controllers
         // GET: Movies
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Movie.ToListAsync());
+            ViewData["NCITKey"] = "We are learning ViewData";
+            ViewBag.KeyLearning = "We are learning ViewData ViewBag";
+            TempData["NCITKe"] = "We are learning TempData";
+
+            HttpContext.Session.SetString("AnyKey", "Hello World!");
+            return View(await _context.Movie.ToListAsync());
         }
 
         // GET: Movies/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            //ViewData["KeyForTemp"] = TempData["NCITKe"].ToString();
+            ViewData["KeyForTemp"] += $"SessionValue {HttpContext.Session.GetString("AnyKey")}";
             if (id == null || _context.Movie == null)
             {
                 return NotFound();

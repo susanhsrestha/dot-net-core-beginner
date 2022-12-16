@@ -5,7 +5,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Movies List</h1>
+<h1>@ViewData["NCITKey"].ToString()</h1>
+<h1>@ViewBag.KeyLearning</h1>
+<h1>@TempData["NCITKe"].ToString()</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
